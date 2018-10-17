@@ -42,8 +42,8 @@ Some ways in which For loops are used:
 for i in range(10):
     print(i)
 ```
-Rather than being a function, range is actually an immutable sequence type.
-The output will contain results from lower bound i.e 0 to the upper bound i.e 10 but excluding 10.By default the lower bound or the starting index is set to zero.
+Rather than being a function, `range()` is actually an immutable sequence type.
+The output will contain results from lower bound i.e 0 to the upper bound i.e 10 but excluding 10. By default the lower bound or the starting index is set to zero.
 Output:
 
 ```
@@ -78,9 +78,9 @@ Output:
 
 **xrange() function**
 
-For the most part, xrange and range are the exact same in terms of functionality. They both provide a way to generate a list of integers for you to use, however you please. The only difference is that range returns a Python list object and xrange returns an xrange object. It means that xrange doesn't actually generate a static list at run-time like range does. It creates the values as you need them with a special technique called yielding. This technique is used with a type of object known as generators.
+For the most part, `xrange()` and range are the exact same in terms of functionality. They both provide a way to generate a list of integers for you to use, however you please. The only difference is that range returns a Python list object, and xrange returns an xrange object. It means that xrange doesn't actually generate a static list at run-time like range does. It creates the values as you need them with a special technique called yielding. This technique is used with a type of object known as generators.
 
-One more thing to add. In Python 3.x, the xrange function does not exist anymore. The range function now does what xrange does in Python 2.x
+Important note: In Python 3.x, xrange was renamed `range`, and the original range function 2.x was removed. 
 
 **Iterate over values in a list or tuple**
 
@@ -176,8 +176,9 @@ If you absolutely need to access the current index of your iteration, do **NOT**
 for index, item in enumerate(shopping_basket):
   print("Item", index, "is a", item)
 ```
-**for/else statements**
-Pyhton permits you to use else with for loops, the else case is executed when none of the conditions with in the loop body was satisfied. To use the else we have to make use of `break` statement so that we can break out of the loop on a satsfied condition.If we do not break out then the else part will be executed.
+**For/else statements**
+
+Python permits you to use `else` with for loops, the else case is executed when none of the conditions with in the loop body was satisfied. To use the `else` we have to make use of `break` statement so that we can break out of the loop on a satsfied condition. If we do not break out then the `else` part will be executed.
 
 ```python
 week_days = ['Monday','Tuesday','Wednesday','Thursday','Friday']
